@@ -1,0 +1,14 @@
+server:
+  port: 80
+spring:
+  application:
+    name: service-consumer-01
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+    registry-fetch-interval-seconds: 5
+    fetch-registry: true
+feign:
+  hystrix:
+    enabled: true # 开启Feign的熔断功能
